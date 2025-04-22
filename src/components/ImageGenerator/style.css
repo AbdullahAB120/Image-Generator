@@ -1,0 +1,117 @@
+.image-generator {
+	padding: 50px 30px;
+	text-align: center;
+}
+
+
+.image-generator h1 {
+	font-size: 50px;
+	font-weight: 800;
+}
+
+.image-generator h1 span {
+	color: #ff6a3d;
+}
+
+
+.image-generator .image {
+	margin: 50px 0;
+	border-radius: 10px;
+}
+
+.image-generator .image img {
+	height: 450px;
+	width: 600px;
+	border-radius: 10px;
+	object-fit: cover;
+}
+.image-generator .image img.loaded {
+	animation: animatedImg 0.8s ease forwards;
+}
+
+@keyframes animatedImg {
+	0% {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+
+.image-generator .generate {
+	display: flex;
+	gap: 15px;
+	height: 55px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.image-generator .generate input {
+	width: 70%;
+	background: #1f3540;
+	color: #ffffff;
+	border: 0;
+	border-radius: 10px;
+	padding: 0 30px;
+	font-size: 18px;
+	outline: none;
+}
+.image-generator .generate input::placeholder {
+	color: #999;
+}
+
+.image-generator .generate button {
+	width: 30%;
+	background: #d13000;
+	color: #ffffff;
+	border: 0;
+	border-radius: 10px;
+	font-size: 18px;
+	font-weight: 600;
+	cursor: pointer;
+	outline: none;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+
+
+@media (max-width: 768px) {
+	.image-generator h1 {
+		font-size: 30px;
+	}
+	
+	
+	.image-generator .image img {
+		height: 245px;
+		width: 330px;
+	}
+	
+	
+	.image-generator .generate {
+		display: inline-block;
+	}
+	
+	.image-generator .generate input {
+		height: 100%;
+		width: 100%;
+		border-radius: 10px;
+		padding: 0 20px;
+		font-size: 16px;
+	}
+	
+	.image-generator .generate button {
+		height: 85%;
+		width: 100%;
+		border-radius: 10px;
+		margin: 15px 0;
+		font-size: 16px;
+		cursor: default;
+	}
+}
